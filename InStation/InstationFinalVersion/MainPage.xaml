@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:InstationFinalVersion"
+             x:Class="InstationFinalVersion.MainPage">
+
+    <StackLayout Orientation="Vertical">
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <SearchBar x:Name = "MusicSearchBar"
+                   SearchButtonPressed="Handle_SearchButtonPressed"
+                   TextChanged="Handle_TextChanged"/>
+        <Grid>
+            <ListView x:Name = "SongsListView"
+                      />
+            <ListView x:Name = "SuggestionsListView"
+                      ItemTapped="Handle_ItemTapped"
+                      IsVisible="True"
+                      SeparatorVisibility="None" BackgroundColor="{ DynamicResource BasePageColor }" HasUnevenRows="true">
+                <ListView.FooterTemplate>
+
+                    <DataTemplate>
+                        <ContentView>
+                        </ContentView>
+                    </DataTemplate>
+                </ListView.FooterTemplate>
+
+            </ListView>
+
+        </Grid>
+        <Button Text="{Binding CommandText}" Command="{Binding PlayPauseCommand}"/>
+    </StackLayout>
+
+</ContentPage>

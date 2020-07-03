@@ -1,0 +1,1 @@
+C:\Users\yagmu\source\repos\InstationFinalVersion\InstationFinalVersion\InstationFinalVersion.UWP\InstationFinalVersion.UWP.csproj;x86
